@@ -1,3 +1,4 @@
+import { ContaCorrente } from './src/model/ContaCorrente';
 import readlinesync = require("readline-sync");
 import { colors } from './src/util/Colors';
 import { Conta } from './src/model/Conta';
@@ -6,13 +7,10 @@ export function main() {
 
     let opcao: number;
 
-    const conta: Conta = new Conta(1, 123, 1, "Adriana", 10000);
-    conta.visualizar();
-    conta.sacar(10500);
-    conta.visualizar();
-    conta.depositar(5000);
-    conta.visualizar();
-
+ //   const conta: Conta = new Conta(1, 123, 1, "Adriana", 10000);
+ //   conta.visualizar();
+   const contaCorrente: ContaCorrente = new ContaCorrente(1, 123, 1, "Adriana", 10000, 5000);
+   contaCorrente.visualizar();
     while (true) {
 
         console.log(colors.bg.black, colors.fg.yellow, 
@@ -98,9 +96,9 @@ export function main() {
 }
 function sobre(): void {
     console.log("\n*****************************************************");
-    console.log("Projeto Desenvolvido por: Kannanda Andrade ");
-    console.log("Generation Brasil - generation@generation.org");
-    console.log("github.com/conteudoGeneration");
+    console.log("Projeto Desenvolvido por: Kannanda");
+    console.log("Kannanda Andrade - kannandaa@genstudents.org");
+    console.log("github.com/nnandak");
     console.log("*****************************************************");
 }
 
